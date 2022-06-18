@@ -1,8 +1,9 @@
 <?php
-
+require "koneksi.php";
 // membutuhkan pemanggilan akses koneksi (mysql)
 // (DISI)
 
+session_start();
 // menjalankan sessions
 // (DISI)
 
@@ -18,7 +19,6 @@ if (empty($_SESSION['uname'])) {
 <html lang="en">
 
 <head>
-
     <!-- Meta Tags -->
 
     <meta charset="utf-8">
@@ -34,7 +34,7 @@ if (empty($_SESSION['uname'])) {
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
 
     <!-- Style -->
 
@@ -95,10 +95,10 @@ if (empty($_SESSION['uname'])) {
                     </li>
                     <br>
                     <li class="nav-item">
-                        <p><strong>NAMA KALIAN</strong></p>
+                        <p><strong>Agus Susanto</strong></p>
                     </li>
                     <li class="nav-item">
-                        <p>NIM KALIAN</p>
+                        <p>6706210162</p>
                     </li>
                     </li>
                 </ul>
@@ -212,7 +212,7 @@ if (empty($_SESSION['uname'])) {
                         while ($row = mysqli_fetch_assoc($query)) {
 
                             // gambar
-                            $img = "http://localhost/latihanapi-server/img/" . $row['gambar']; // LOCAL
+                            $img = "http://localhost/kuliah/pbw/latihanapi-server/img/" . $row['gambar']; // LOCAL
                             // HOSTING $img = "https://localhost/latihanapi-server/img/".$row['url_gambar'];
                         ?>
                         <!-- isi dari row yang dipanggil berdasarkan kolomnya -->

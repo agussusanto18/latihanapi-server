@@ -1,13 +1,13 @@
 <?php 
 
-// membutuhkan pemanggilan akses koneksi (mysql)
-// (DISI)
-
+include("koneksi.php");
 // mengambil ID
 $id = mysqli_real_escape_string($db,$_GET['id']);
 
 // melakukan query delete berdasarkan id
 // (DISI)
+
+$query = "DELETE FROM dataku  WHERE id=$id";
 
 // melakukan pengecekan saat menghapus data
 $hapus=mysqli_query($db, $query);
